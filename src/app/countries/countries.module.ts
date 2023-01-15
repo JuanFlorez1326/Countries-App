@@ -6,6 +6,7 @@ import { CapitalComponent } from './pages/capital/capital.component';
 import { CountryComponent } from './pages/country/country.component';
 import { RegionComponent } from './pages/region/region.component';
 import { SeeCountryComponent } from './pages/see-country/see-country.component';
+import { RouterModule } from '@angular/router';
 
 
 @NgModule({
@@ -17,6 +18,7 @@ import { SeeCountryComponent } from './pages/see-country/see-country.component';
   ],
   imports: [
     CommonModule,
+    RouterModule,
     FormsModule
   ],
   exports: [
