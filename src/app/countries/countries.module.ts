@@ -7,6 +7,8 @@ import { CountryComponent } from './pages/country/country.component';
 import { RegionComponent } from './pages/region/region.component';
 import { SeeCountryComponent } from './pages/see-country/see-country.component';
 import { RouterModule } from '@angular/router';
+import { CountryTableComponent } from './components/country-table/country-table.component';
+import { InputCountryComponent } from './components/input-country/input-country.component';
 
 
 @NgModule({
@@ -14,7 +16,9 @@ import { RouterModule } from '@angular/router';
     CapitalComponent,
     CountryComponent,
     RegionComponent,
-    SeeCountryComponent
+    SeeCountryComponent,
+    CountryTableComponent,
+    InputCountryComponent
   ],
   imports: [
     CommonModule,

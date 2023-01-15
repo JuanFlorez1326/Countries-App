@@ -16,9 +16,10 @@ export class CountryComponent {
   error: boolean = false;
   countries: Country[] = [];
 
-  search() {
+  search( event: string ) {
     this.error = false;
-    this.countryService.searchCountry( this.term )
+    this.term = event;
+    this.countryService.searchCountry( event )
       .subscribe( 
         (res) => {
           console.log(res);
@@ -29,5 +30,9 @@ export class CountryComponent {
           this.countries = [];
         }
       );
+  }
+
+  suggestions( event: string ) {
+    this.error = false;
   }
 }
