@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { catchError, Observable, of } from 'rxjs';
 import { Country } from '../interfaces/country.interface';
@@ -13,7 +13,6 @@ export class CountryService {
   ) { }
 
   private apiUrl: string = 'https://restcountries.com/v3.1/' 
-  private apiUrlV2: string = 'https://restcountries.com/v2/' 
 
   searchCountry( term: string ): Observable<Country[]> {
     const url = `${this.apiUrl}/name/${term}`;
@@ -26,7 +25,7 @@ export class CountryService {
   }
 
   searchRegion( code: string ): Observable<Country[]> {
-    const url = `${this.apiUrlV2}/regionalbloc/${code}`;
+    const url = `${this.apiUrl}/region/${code}`;
     return this.http.get<Country[]>(url)
   }
 
@@ -34,4 +33,5 @@ export class CountryService {
     const url = `${this.apiUrl}/alpha/${id}`;
     return this.http.get<Country>(url)
   }
+  
 }

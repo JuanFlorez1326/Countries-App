@@ -13,7 +13,7 @@ export class RegionComponent {
     private readonly countryService :CountryService
   ) {}
 
-  regions: string[] = ['EU', 'EFTA', 'CARICOM', 'PA', 'AU', 'USAN', 'EEU', 'AL', 'ASEAN', 'CAIS', 'CEFTA', 'NAFTA', 'SAARC'];
+  regions: string[] = ['africa', 'americas', 'asia', 'europe', 'oceania'];
   activeRegion: string = '';
   countries: Country[] = []
   error: boolean = true
@@ -35,7 +35,6 @@ export class RegionComponent {
     this.countryService.searchRegion( code )
       .subscribe( 
         (res) => {
-          console.log(res);
           this.countries = res;
         }
       );
