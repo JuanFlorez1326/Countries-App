@@ -12,7 +12,8 @@ export class CountryService {
     private readonly http: HttpClient
   ) { }
 
-  private apiUrl: string = 'https://restcountries.com/v3.1/'  
+  private apiUrl: string = 'https://restcountries.com/v3.1/' 
+  private apiUrlV2: string = 'https://restcountries.com/v2/' 
 
   searchCountry( term: string ): Observable<Country[]> {
     const url = `${this.apiUrl}/name/${term}`;
@@ -21,6 +22,11 @@ export class CountryService {
 
   searchCapital( term: string ): Observable<Country[]> {
     const url = `${this.apiUrl}/capital/${term}`;
+    return this.http.get<Country[]>(url)
+  }
+
+  searchRegion( code: string ): Observable<Country[]> {
+    const url = `${this.apiUrlV2}/regionalbloc/${code}`;
     return this.http.get<Country[]>(url)
   }
 
