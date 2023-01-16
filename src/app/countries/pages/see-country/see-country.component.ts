@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { switchMap, tap } from 'rxjs';
 import { CountryService } from '../../services/country.service';
-import { Country, Name } from '../../interfaces/country.interface';
+import { Country } from '../../interfaces/country.interface';
 
 @Component({
   selector: 'app-see-country',
