@@ -10,7 +10,6 @@ import { RouterModule } from '@angular/router';
 import { CountryTableComponent } from './components/country-table/country-table.component';
 import { InputCountryComponent } from './components/input-country/input-country.component';
 
-
 @NgModule({
   declarations: [
     CapitalComponent,
@@ -32,4 +31,4 @@ import { InputCountryComponent } from './components/input-country/input-country.
     SeeCountryComponent
   ]
 })
-export class CountriesModule { }
+export class CountriesModule {}

@@ -7,7 +7,5 @@ import { Country } from '../../interfaces/country.interface';
 })
 export class CountryTableComponent {
 
-  constructor() {}
-
   @Input('dataCountry') countries: Country[] = [];
 }
