@@ -15,6 +15,7 @@ export class CountryComponent {
   term: string = '';
   error: boolean = false;
   countries: Country[] = [];
+  txtPlaceholder: string = 'Search By Country';
 
   search( event: string ) {
     this.error = false;

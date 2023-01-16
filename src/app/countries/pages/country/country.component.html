@@ -5,7 +5,8 @@
     <div class="col">
         <app-input-country 
             (onEnter)="search( $event )"
-            (onDebounce)="suggestions( $event )" 
+            (onDebounce)="suggestions( $event )"
+            [plahol]="txtPlaceholder"
         ></app-input-country>
     </div>
 </div>
